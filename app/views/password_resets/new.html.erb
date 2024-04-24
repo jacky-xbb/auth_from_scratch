@@ -1,0 +1,6 @@
+<%= form_with url: password_resets_path, class: "flex mt-4 space-x-2" do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field :email, class: "input", id: :user_email %>
+
+  <%= form.submit "Submit", class: "button", id: :reset_password_submit %>
+<% end %>
