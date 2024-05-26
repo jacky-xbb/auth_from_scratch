@@ -4,10 +4,10 @@
   <div class="flex flex-col items-center space-y-2">
     <div class="flex space-x-2 items-center">
       <% if current_user %>
-        <%= button_to "Sign Out", sign_out_path, method: :delete, id: "user-sign-out", class: "button-info" %>
+        <%= button_to "Sign Out", sign_out_path, method: :delete, id: :user_sign_out, class: "button-info" %>
         <p>Welcome, <%= current_user.email %></p>
       <% else %>
-        <%= link_to "Sign Up", sign_up_path, id: "user-sign-up" ,class: "button-info" %>
+        <%= link_to "Sign Up", sign_up_path, id: :user_sign_up ,class: "button-info" %>
         <%= link_to "Sign In", sign_in_path, id: :user_login, class: "button-info" %>
       <% end %>
     </div>

@@ -8,6 +8,8 @@ class RegistrationsController < ApplicationController
 
     return unless @user.save
 
+    session[:user_id] = @user.id
+
     flash[:notice] = "Welcome #{@user.email}"
     redirect_to root_path
   end

@@ -7,13 +7,13 @@
               <%= form_with model: @user, url: registration_path, class: "space-y-4 md:space-y-6" do |f| %>
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <%= f.email_field :email, class: "text-field", placeholder: "name@company.com", id: :email %>
+                      <%= f.email_field :email, class: "text-field", placeholder: "name@company.com", id: :user_email %>
                   </div>
                   <div>
                       <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <%= f.password_field :password, class: "text-field", placeholder: "••••••••", id: "user-password" %>
+                      <%= f.password_field :password, class: "text-field", placeholder: "••••••••", id: :user_password %>
                   </div>
-                  <%= f.submit "Create an account", class: "submit", id: "user-submit" %>
+                  <%= f.submit "Create an account", class: "submit", id: :user_submit %>
                   <p class="dimmed-text">
                     Already have an account? <%= link_to "Sign in", sign_in_path,  class: "link" %>
                   </p>

@@ -7,11 +7,11 @@
               <%= form_with url: sign_in_create_path, class: "space-y-4 md:space-y-6" do |f| %>
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <%= f.email_field :email, class: "text-field", placeholder: "name@company.com", id: :email %>
+                      <%= f.email_field :email, class: "text-field", placeholder: "name@company.com", id: :user_email %>
                   </div>
                   <div>
                       <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <%= f.password_field :password, class: "text-field", placeholder: "••••••••", id: :password %>
+                      <%= f.password_field :password, class: "text-field", placeholder: "••••••••", id: :user_password %>
                   </div>
                   <%= f.submit "Create an account", class: "submit", id: :login_submit %>
                   <div class="text-left mt-2">
@@ -20,7 +20,7 @@
                   </div>
 
                   <p class="dimmed-text">
-                    Don't have an account? <%= link_to "Sign up", sign_up_path, method: :post, class: "link" %>
+                    Don't have an account? <%= link_to "Sign up", sign_up_path, method: :post, id: :user_sign_up, class: "link" %>
                   </p>
               <% end %>
           </div>
